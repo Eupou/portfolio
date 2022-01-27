@@ -15,6 +15,7 @@ body {
   background-color: var(--main-color);
   color: var(--default-font-color);
   font-family: var(--default-font-family);
+  height: 300vh;
 }
 
 a {
@@ -32,6 +33,7 @@ a {
   border-bottom: 1px solid white;
   background-color: var(--main-color);
   box-shadow: #501c64b0 0 5px 5px;
+  z-index: 1000000;
 }
 
 .header__links {
@@ -89,8 +91,9 @@ a {
 }
 
 .projetos {
-  border: 1px solid white;
-  height: 50vh;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   width: 90vw;
   margin: 200px auto 0 auto;
 }
@@ -104,4 +107,86 @@ a {
 
 .projetos__titulo h1 {
   margin-left: 15px;
+}
+
+.projetos__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 550px;
+  border-bottom: 1px solid white;
+}
+
+.item__celular {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
+  position: relative;
+}
+
+.celular__topo {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.celular__lateral {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.lateral__esq {
+  background-color: black;
+  height: 400px;
+  width: 17px;
+}
+
+.lateral__dir {
+  position: absolute;
+  right: 0;
+  background-color: black;
+  height: 400px;
+  width: 17px;
+}
+
+.celular__base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 63px;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.coroa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.bolinha {
+  height: 38px;
+  width: 38px;
+  background-color: rgba(20, 20, 20, 0.89);
+  border-radius: 50%;
+}
+
+.iframe {
+  height: 400px;
+  width: 283px;
+}
+
+.projetos__explicacao {
+  width: 500px;
+  font-size: 22px;
 }
