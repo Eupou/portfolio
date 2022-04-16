@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -29,7 +30,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  padding: 15px 0;
+  /* height: 8vh; */
   border-bottom: 1px solid white;
   background-color: var(--main-color);
   box-shadow: #501c64b0 0 5px 5px;
@@ -53,10 +55,28 @@ a {
   margin-right: 20px;
 }
 
+@media (max-width: 425px) {
+  .header {
+    flex-direction: column;
+  }
+  
+  .nome, .projeto,
+  .contato {
+    margin: inherit;
+  }
+  
+  .header__links {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .apresentacao {
   font-family: "Lato", sans-serif;
-  height: 250px;
-  width: 650px;
+  padding: 10px;
+  max-width: 650px;
   text-align: center;
   border: 1px solid white;
   box-shadow: #501c64b0 0 5px 5px;
@@ -91,18 +111,37 @@ a {
 }
 
 .projetos {
-  border-top: 1px solid white;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
   width: 90vw;
-  margin: 200px auto 0 auto;
+  margin: 100px auto 0 auto;
 }
+
+@media (max-width: 425px) {
+  .projetos {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projetos {
+    margin: 200px auto 0 auto;
+  }
+}
+
+.titulo {
+  margin: 15px auto;
+  width: 100px;
+}
+
 
 .projetos__titulo {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   height: 50px;
+  margin-top: 100px;
+  font-size: 20px;
 }
 
 .projetos__titulo h1 {
@@ -113,16 +152,36 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 550px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   border-bottom: 1px solid white;
 }
 
+.projetos__explicacao {
+  width: 500px;
+  font-size: 22px;
+}
+
+@media (max-width: 425px) {
+  .projetos__explicacao {
+    padding: 10px;
+  }
+}
+
 .item__celular {
+  margin: 25px 0;
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 300px;
+  height: 550px;
+  width: 350px;
   position: relative;
+}
+
+@media (max-width: 1023px) {
+  .item__celular {
+    display: none;
+  }
 }
 
 .celular__topo {
@@ -136,21 +195,21 @@ a {
 .celular__lateral {
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .lateral__esq {
   background-color: black;
-  height: 400px;
-  width: 17px;
+  height: 450px;
+  width: 15px;
 }
 
 .lateral__dir {
   position: absolute;
   right: 0;
   background-color: black;
-  height: 400px;
-  width: 17px;
+  height: 450px;
+  width: 15px;
 }
 
 .celular__base {
@@ -182,11 +241,8 @@ a {
 }
 
 .iframe {
-  height: 400px;
-  width: 283px;
+  height: 450px;
+  width: 320px;
 }
 
-.projetos__explicacao {
-  width: 500px;
-  font-size: 22px;
-}
+
