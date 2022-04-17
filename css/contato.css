@@ -1,0 +1,29 @@
+.contato__texto {
+    font-size: 25px;
+    width: 60vw;
+    margin: 30px auto;
+}
+
+.contato__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    height: 50px;
+    width: 60vw;
+    border: 1px solid white;
+}
+
+.contato__box svg {
+    margin-left: 20px;
+}
+
+.contato__box div {
+    margin-right: 20px;
+}
+
+
+.fw-600 {
+    margin-left: 5px;
+    font-weight: 600;
+}
