@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
     margin: 30px auto;
     height: 50px;
     width: 60vw;
@@ -26,4 +27,32 @@
 .fw-600 {
     margin-left: 5px;
     font-weight: 600;
+}
+@media (max-width: 630px) {
+    .contato__texto {
+        width: 95vw;
+    }
+
+    .contato__box{
+        width: 95vw;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contato__box {
+        width: 100vw;
+    }
+
+    .contato__box svg {
+        margin-left: 10px;
+    }
+    
+    .contato__box div {
+        margin-right: 10px;
+    }
+
+    .fw-600 {
+        margin-left: initial;
+    }
 }
